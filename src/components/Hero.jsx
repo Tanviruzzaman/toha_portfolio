@@ -54,7 +54,7 @@ export default function Hero() {
             >
               Get In Touch
             </button>
-            <a href="/resume.pdf" className="btn btn-outline" download>
+            <a href={`${import.meta.env.BASE_URL}resume.pdf`} className="btn btn-outline" download="TanviruzzamanToha_Resume.pdf">
               Resume
             </a>
           </div>

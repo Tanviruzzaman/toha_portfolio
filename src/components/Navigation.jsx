@@ -59,7 +59,7 @@ export default function Navigation({ darkMode, setDarkMode }) {
             </button>
           </li>
           <li>
-            <a href="/resume.pdf" className="nav-link resume-link" download>
+            <a href={`${import.meta.env.BASE_URL}resume.pdf`} className="nav-link resume-link" download="TanviruzzamanToha_Resume.pdf">
               Download Resume
             </a>
           </li>
