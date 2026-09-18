@@ -1,78 +1,77 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../styles/Navigation.css'
 
-export default function Navigation({ darkMode, setDarkMode }) {
-  const [isOpen, setIsOpen] = useState(false)
+const links = [
+  { id: 'about', label: 'About' },
+  { id: 'daily', label: 'Daily' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'work', label: 'Work' },
+  { id: 'contact', label: 'Contact' },
+]
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
-    const offset = 80
-    if (element) {
-      const top = element.offsetTop - offset
-      window.scrollTo({ top, behavior: 'smooth' })
-      setIsOpen(false)
-    }
+export default function Navigation() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24)
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  const go = (id) => {
+    const el = document.getElementById(id)
+    if (el) window.scrollTo({ top: el.offsetTop - 72, behavior: 'smooth' })
+    setIsOpen(false)
   }
 
   return (
-    <nav className="navbar">
-      <div className="nav-container">
-        <div className="nav-brand">
-          <a href="#home" onClick={() => scrollToSection('hero')} className="brand-link">
-            Tanvir Toha
-          </a>
-        </div>
-
-        <button
-          className={`hamburger ${isOpen ? 'active' : ''}`}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
+    <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
+      <div className="nav-inner">
+        <button className="nav-brand" onClick={() => go('hero')}>
+          Tanvir&nbsp;Toha<span className="brand-dot">.</span>
         </button>
 
-        <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
+        <ul className="nav-links">
+          {links.map((l) => (
+            <li key={l.id}>
+              <button className="nav-link" onClick={() => go(l.id)}>{l.label}</button>
+            </li>
+          ))}
           <li>
-            <button onClick={() => scrollToSection('hero')} className="nav-link">
-              Home
-            </button>
-          </li>
-          <li>
-            <button onClick={() => scrollToSection('about')} className="nav-link">
-              About
-            </button>
-          </li>
-          <li>
-            <button onClick={() => scrollToSection('skills')} className="nav-link">
-              Skills
-            </button>
-          </li>
-          <li>
-            <button onClick={() => scrollToSection('projects')} className="nav-link">
-              Projects
-            </button>
-          </li>
-          <li>
-            <button onClick={() => scrollToSection('contact')} className="nav-link">
-              Contact
-            </button>
-          </li>
-          <li>
-            <a href={`${import.meta.env.BASE_URL}resume.pdf`} className="nav-link resume-link" download="TanviruzzamanToha_Resume.pdf">
-              Download Resume
+            <a
+              className="nav-resume"
+              href={`${import.meta.env.BASE_URL}resume.pdf`}
+              download="TanviruzzamanToha_Resume.pdf"
+            >
+              Résumé <span className="arrow">↗</span>
             </a>
           </li>
-          <li>
-            <button
-              className="dark-toggle"
-              onClick={() => setDarkMode(!darkMode)}
-              aria-label="Toggle dark mode"
-            >
-              {darkMode ? '☀️' : '🌙'}
-            </button>
-          </li>
         </ul>
+
+        <button
+          className={`nav-toggle ${isOpen ? 'is-open' : ''}`}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <div className={`nav-overlay ${isOpen ? 'is-open' : ''}`}>
+        {links.map((l, i) => (
+          <button key={l.id} className="overlay-link" onClick={() => go(l.id)}>
+            <span className="overlay-index">0{i + 1}</span>{l.label}
+          </button>
+        ))}
+        <a
+          className="overlay-link"
+          href={`${import.meta.env.BASE_URL}resume.pdf`}
+          download="TanviruzzamanToha_Resume.pdf"
+          onClick={() => setIsOpen(false)}
+        >
+          <span className="overlay-index">↗</span>Résumé
+        </a>
       </div>
     </nav>
   )

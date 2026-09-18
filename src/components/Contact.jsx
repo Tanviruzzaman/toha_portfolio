@@ -2,129 +2,62 @@ import '../styles/Contact.css'
 import { useState } from 'react'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
-
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
+    setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Here you can add email service integration (EmailJS, Formspree, etc.)
-    console.log('Form submitted:', formData)
+    const subject = encodeURIComponent(`Portfolio enquiry from ${formData.name || 'someone'}`)
+    const body = encodeURIComponent(`${formData.message}\n\n— ${formData.name} (${formData.email})`)
+    window.location.href = `mailto:toha@softifybd.com?subject=${subject}&body=${body}`
     setSubmitted(true)
-    setFormData({ name: '', email: '', message: '' })
-    
-    setTimeout(() => {
-      setSubmitted(false)
-    }, 3000)
+    setTimeout(() => setSubmitted(false), 4000)
   }
 
   return (
-    <section id="contact" className="contact">
+    <section id="contact" className="section contact">
       <div className="container">
-        <div className="section-header">
-          <h2>Get In Touch</h2>
-          <div className="header-line"></div>
+        <div className="section-head">
+          <span className="section-index">05</span>
+          <h2 className="section-title">Contact</h2>
         </div>
 
-        <div className="contact-content">
-          <div className="contact-info">
-            <h3>Let's Connect</h3>
-            <p>
-              I'm always interested in hearing about new projects and opportunities. 
-              Feel free to reach out through any of the channels below.
+        <div className="contact-grid">
+          <div className="contact-left">
+            <p className="contact-statement display-lg">
+              Let's build something<span className="title-dot">.</span>
             </p>
-
-            <div className="contact-methods">
-              <div className="contact-method">
-                <span className="icon">📧</span>
-                <div>
-                  <h4>Email</h4>
-                  <a href="mailto:toha@softifybd.com">toha@softifybd.com</a>
-                </div>
-              </div>
-
-              <div className="contact-method">
-                <span className="icon">💼</span>
-                <div>
-                  <h4>LinkedIn</h4>
-                  <a href="https://www.linkedin.com/in/tanviruzzaman-toha-730b8b1b9" target="_blank" rel="noopener noreferrer">
-                    Tanvir Toha
-                  </a>
-                </div>
-              </div>
-
-              <div className="contact-method">
-                <span className="icon">💻</span>
-                <div>
-                  <h4>GitHub</h4>
-                  <a href="https://github.com/Tanviruzzaman" target="_blank" rel="noopener noreferrer">
-                    Tanviruzzaman
-                  </a>
-                </div>
-              </div>
+            <a className="contact-email" href="mailto:toha@softifybd.com">toha@softifybd.com</a>
+            <div className="contact-socials">
+              <a className="link-arrow" href="https://www.linkedin.com/in/tanviruzzaman-toha-730b8b1b9" target="_blank" rel="noopener noreferrer">
+                LinkedIn <span className="arrow">↗</span>
+              </a>
+              <a className="link-arrow" href="https://github.com/Tanviruzzaman" target="_blank" rel="noopener noreferrer">
+                GitHub <span className="arrow">↗</span>
+              </a>
             </div>
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>
-            {submitted && (
-              <div className="success-message">
-                ✓ Thank you! I'll get back to you soon.
-              </div>
-            )}
-
-            <div className="form-group">
+            <div className="field">
               <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                placeholder="Your name"
-              />
+              <input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="Your name" />
             </div>
-
-            <div className="form-group">
+            <div className="field">
               <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                placeholder="your@email.com"
-              />
+              <input id="email" type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="you@email.com" />
             </div>
-
-            <div className="form-group">
+            <div className="field">
               <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                placeholder="Your message..."
-                rows="5"
-              ></textarea>
+              <textarea id="message" name="message" value={formData.message} onChange={handleChange} required placeholder="What's on your mind?" rows="4"></textarea>
             </div>
-
-            <button type="submit" className="btn btn-primary">
-              Send Message
+            <button type="submit" className="btn">
+              {submitted ? 'Opening your mail app…' : 'Send message'}
             </button>
           </form>
         </div>
