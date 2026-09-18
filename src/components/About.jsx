@@ -17,34 +17,37 @@ export default function About() {
 
           <div className="about-text">
             <p>
-              I'm a confident, innovative, and hard-working Mobile Application Developer
-              with a strong focus on Flutter and Native Android development. Based in
-              Narayanganj, Dhaka, I work at SoftifyBD LTD building scalable, user-centric
-              mobile applications.
+              I'm an Android Platform Engineer at Softify BD Ltd, based in Narayanganj, Dhaka,
+              working on production platforms for ISP and education clients. I'm the lead
+              contributor on a white-label Android platform that ships 1,000+ separately
+              branded, separately signed apps to Google Play from a single Java codebase —
+              along with the Gradle tooling, Fastlane release automation, payment and hardware
+              integrations that keep it shipping.
             </p>
 
             <p>
-              I specialize in Clean Architecture with Riverpod for state management,
-              RESTful API integration, payment gateway integration, and multi-role app
-              portals. I hold a B.Sc in Software Engineering from Daffodil International
-              University and continuously enhance my architectural expertise.
+              My day-to-day spans multi-flavor Gradle builds, a Python + Fastlane release
+              pipeline, 9 integrated payment gateways, MikroTik router monitoring over SignalR,
+              and thermal/POS printing — plus a 135K-LOC Flutter school ERP built on a
+              feature-first architecture with Riverpod. I hold a B.Sc in Software Engineering
+              from Daffodil International University.
             </p>
 
             <div className="about-highlights">
               <div className="highlight-item">
                 <span className="icon">📱</span>
-                <h3>Mobile First</h3>
-                <p>Flutter & Native Android expert</p>
+                <h3>Platform Scale</h3>
+                <p>1,000+ white-label apps, one codebase</p>
               </div>
               <div className="highlight-item">
-                <span className="icon">🏗️</span>
-                <h3>Clean Architecture</h3>
-                <p>Scalable, maintainable codebases</p>
+                <span className="icon">⚙️</span>
+                <h3>Release Automation</h3>
+                <p>Python + Fastlane, unattended Play deploys</p>
               </div>
               <div className="highlight-item">
                 <span className="icon">🔗</span>
                 <h3>Integrated</h3>
-                <p>REST APIs & payment gateways</p>
+                <p>9 payment gateways, MikroTik & POS hardware</p>
               </div>
             </div>
 

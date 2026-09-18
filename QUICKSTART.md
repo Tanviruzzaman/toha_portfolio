@@ -53,7 +53,7 @@ Update the bio paragraph and social links:
 </p>
 
 // Update email
-<a href="mailto:your.email@example.com">your.email@example.com</a>
+<a href="mailto:toha@softifybd.com">toha@softifybd.com</a>
 ```
 
 ### 2. Contact Section
@@ -61,9 +61,9 @@ Update the bio paragraph and social links:
 
 Replace these with your actual contact information:
 ```jsx
-<a href="mailto:your.email@example.com">your.email@example.com</a>
+<a href="mailto:toha@softifybd.com">toha@softifybd.com</a>
 <a href="https://www.linkedin.com/in/YOUR-PROFILE">LinkedIn URL</a>
-<a href="https://github.com/YOUR-USERNAME">GitHub URL</a>
+<a href="https://github.com/Tanviruzzaman">GitHub URL</a>
 ```
 
 ### 3. Skills Section
@@ -162,7 +162,7 @@ npm run preview
    git add .
    git commit -m "Initial portfolio commit"
    git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/portfolio.git
+   git remote add origin https://github.com/Tanviruzzaman/toha_portfolio.git
    git push -u origin main
    ```
 
@@ -187,7 +187,7 @@ npm run preview
 1. GitHub Actions is configured in `.github/workflows/deploy.yml`
 2. Every push to `main` will automatically build and deploy
 
-Your portfolio will be live at: `https://YOUR-USERNAME.github.io/portfolio/`
+Your portfolio will be live at: `https://Tanviruzzaman.github.io/toha_portfolio/`
 
 ## 📝 Environment Variables (For Firebase Integration)
 

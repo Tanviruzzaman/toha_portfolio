@@ -100,7 +100,7 @@ git init
 git add .
 git commit -m "Initial portfolio commit"
 git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/portfolio.git
+git remote add origin https://github.com/Tanviruzzaman/toha_portfolio.git
 git push -u origin main
 
 # Create gh-pages branch
@@ -142,10 +142,10 @@ Edit font sizes and styles in component CSS files (in `src/styles/`)
 
 After deployment, your portfolio will be live at:
 ```
-https://YOUR-GITHUB-USERNAME.github.io/portfolio/
+https://Tanviruzzaman.github.io/toha_portfolio/
 ```
 
-Example: `https://tanviruzzaman.github.io/portfolio/`
+Example: `https://tanviruzzaman.github.io/toha_portfolio/`
 
 ## 📚 Documentation Files
 

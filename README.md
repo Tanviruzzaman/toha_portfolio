@@ -1,214 +1,84 @@
-# Tanvir Toha - Portfolio Website
+# Tanvir Toha — Portfolio Website
 
-A modern, professional portfolio website built with **React** and **Vite**, showcasing skills in frontend development, Firebase, performance optimization, and testing.
+A modern, responsive personal portfolio for **Tanviruzzaman Toha**, Android Platform Engineer at
+Softify BD Ltd. Built with **React 19** and **Vite**, and deployed to GitHub Pages.
 
-## Features
+🔗 **Live site:** https://tanviruzzaman.github.io/toha_portfolio/
 
-✨ **Modern & Professional Design**
-- Clean, user-friendly interface
-- Light professional theme
-- Fully responsive (desktop, tablet, mobile)
-- Smooth scrolling and animations
+## About
 
-📱 **Key Sections**
-- **Hero**: Eye-catching landing section
-- **About**: Personal introduction with highlights
-- **Skills**: Organized skill categories
-  - Frontend (React, JavaScript, HTML, CSS)
-  - Backend & Databases (Firebase, Node.js)
-  - Performance & Monitoring (Firebase Performance, Analytics, Crash Analytics)
-  - Development Practices (Testing, Git, Layout Management)
-- **Projects**: Featured project showcase
-- **Contact**: Contact form and social links
-- **Resume**: PDF download capability
+I build production mobile platforms for ISP and education clients. I'm the lead contributor on a
+white-label Android platform that ships **1,000+ separately branded apps** to Google Play from a
+single Java codebase, along with the build tooling, release automation, and payment/hardware
+integrations that keep it shipping.
 
-🚀 **Built With**
-- React 19
-- Vite (Fast build tool)
-- CSS3 with CSS Variables
-- Responsive Grid & Flexbox
-- GitHub Pages ready
+- 📍 Narayanganj, Dhaka, Bangladesh
+- 💼 [LinkedIn](https://www.linkedin.com/in/tanviruzzaman-toha-730b8b1b9)
+- 💻 [GitHub](https://github.com/Tanviruzzaman)
+- 📧 toha@softifybd.com
 
-## Project Structure
+## Featured work
+
+- **ISP Digital — White-label ISP Platform.** One Java codebase shipping 1,000+ separately branded,
+  separately signed apps to Google Play; three role-based apps in one binary (subscriber, ISP admin,
+  MAC reseller). 9 payment gateways behind a common abstraction, real-time MikroTik bandwidth
+  monitoring over SignalR, and Bluetooth ESC/POS + Sunmi thermal receipt printing.
+- **Edufy — School Management Platform.** A 135K-LOC Flutter school ERP with 40+ modules shipping as
+  300 white-label apps; Admin/Teacher/Student roles, feature-first architecture (Riverpod, Dio,
+  go_router) with token interceptor, session invalidation and encrypted storage, and 5-language i18n
+  including RTL.
+- **Release Automation Pipeline.** Python + Fastlane tooling (keystore generation, flavor
+  scaffolding, resource generation, batched Gradle builds, direct Play API publishing) that turns a
+  300-app release into a single unattended run.
+- **Build-time Firebase Config Resolver.** A Gradle task that auto-selects the correct
+  `google-services.json` from 37 Firebase projects per `applicationId` and fails the build on an
+  unregistered app.
+
+## Tech stack
+
+- **Framework:** React 19
+- **Build tool:** Vite
+- **Styling:** CSS3 with CSS variables (light/dark theme, responsive grid & flexbox)
+- **Deployment:** GitHub Pages via GitHub Actions
+
+## Project structure
 
 ```
 src/
-├── components/
-│   ├── Navigation.jsx
-│   ├── Hero.jsx
-│   ├── About.jsx
-│   ├── Skills.jsx
-│   ├── Projects.jsx
-│   ├── Contact.jsx
-│   └── Footer.jsx
-├── styles/
-│   ├── Navigation.css
-│   ├── Hero.css
-│   ├── About.css
-│   ├── Skills.css
-│   ├── Projects.css
-│   ├── Contact.css
-│   └── Footer.css
+├── components/    # Navigation, Hero, About, Skills, Projects, Contact, Footer
+├── styles/        # Per-component CSS
+├── assets/        # Images and resume
 ├── App.jsx
-└── App.css
+└── main.jsx
+public/            # Static assets (favicon, images, resume.pdf)
 ```
 
-## Getting Started
-
-### Prerequisites
-- Node.js (v18 or higher)
-- npm or yarn
-
-### Installation
+## Getting started
 
 ```bash
-# Clone the repository
-git clone https://github.com/Tanviruzzaman/portfolio.git
-cd portfolio
-
 # Install dependencies
 npm install
 
-# Start development server
-npm run dev
-```
-
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
-
-## Customization
-
-### Add Your Images
-
-Place your images in the `public/` folder:
-- `public/toha1.jpg` - Profile image for hero section
-- `public/toha2.jpg` - Secondary image for about section
-
-### Add Your Resume
-
-Place your resume as `public/resume.pdf`
-
-### Update Personal Info
-
-Edit these files:
-1. `src/components/About.jsx` - Add your bio and social links
-2. `src/components/Contact.jsx` - Update email and contact info
-3. `src/components/Hero.jsx` - Update subtitle and description if needed
-
-### Customize Colors
-
-Edit CSS variables in `src/App.css`:
-
-```css
-:root {
-  --primary-color: #2563eb;      /* Main blue */
-  --secondary-color: #1e40af;    /* Dark blue */
-  --accent-color: #dbeafe;       /* Light blue */
-  /* ... */
-}
-```
-
-## Building for Production
-
-```bash
-# Build the project
-npm run build
-
-# Preview the built version
-npm run preview
-```
-
-## Deployment to GitHub Pages
-
-### Prerequisites
-- Repository on GitHub
-- GitHub account
-
-### Steps
-
-1. **Update repository name in vite.config.js:**
-   ```javascript
-   base: '/portfolio/'  // Change 'portfolio' to your repo name
-   ```
-
-2. **Deploy:**
-   ```bash
-   npm run deploy
-   ```
-
-3. **Enable GitHub Pages:**
-   - Go to repository Settings
-   - Select Pages section
-   - Choose `gh-pages` branch as source
-   - Save
-
-Your portfolio will be live at: `https://Tanviruzzaman.github.io/portfolio/`
-
-See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions.
-
-## Performance Optimization
-
-This portfolio is optimized for:
-- ⚡ Fast loading (Vite)
-- 📊 Firebase Analytics integration ready
-- 🔍 SEO friendly structure
-- ♿ Accessibility considerations
-
-## Available Scripts
-
-```bash
-# Development server
+# Start the dev server (http://localhost:5173)
 npm run dev
 
 # Build for production
 npm run build
 
-# Preview production build locally
+# Preview the production build
 npm run preview
 
-# Deploy to GitHub Pages
-npm run deploy
-
-# Run ESLint
+# Lint
 npm run lint
 ```
 
-## Browser Support
+## Deployment
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+Every push to `main` triggers the GitHub Actions workflow in
+`.github/workflows/deploy.yml`, which lints, builds, and deploys the site to GitHub Pages.
 
-## Technologies
-
-- **Frontend Framework**: React 19
-- **Build Tool**: Vite
-- **Styling**: CSS3
-- **Deployment**: GitHub Pages
-- **Version Control**: Git
-
-## Skills Highlighted
-
-- ✅ React
-- ✅ JavaScript (ES6+)
-- ✅ HTML5 & CSS3
-- ✅ Responsive Design
-- ✅ Firebase (Performance, Analytics, Crash Analytics)
-- ✅ Performance Optimization
-- ✅ Caching Strategies
-- ✅ Component Testing
-- ✅ Git & Version Control
+The Vite `base` is set to `/toha_portfolio/` in `vite.config.js` to match the repository name.
 
 ## License
 
-This project is open source and available under the MIT License.
-
-## Connect
-
-- 💼 LinkedIn: [Tanvir Toha](https://www.linkedin.com/in/tanvir-toha-506806306)
-- 💻 GitHub: [Tanviruzzaman](https://github.com/Tanviruzzaman)
-- 📧 Email: your.email@example.com
-
----
-
-Feel free to fork this portfolio template and customize it for your own use! 🚀
+Released under the MIT License.

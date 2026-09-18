@@ -1,7 +1,7 @@
 import '../styles/Hero.css'
 import profileImg from '../assets/toha1.png'
 
-const techStack = ['Flutter', 'Dart', 'Android', 'Java', 'REST API', 'Riverpod', 'MVVM']
+const techStack = ['Java', 'Dart', 'Android SDK', 'Flutter', 'Riverpod', 'Gradle', 'Fastlane', 'Firebase']
 
 export default function Hero() {
   const scrollToSection = (sectionId) => {
@@ -32,13 +32,15 @@ export default function Hero() {
             Hi, I'm <span className="highlight">Tanvir Toha</span>
           </h1>
           <p className="hero-subtitle">
-            Mobile Application Developer
+            Android Platform Engineer
             <br />
-            <span className="subtitle-accent">Flutter &amp; Android Expert</span>
+            <span className="subtitle-accent">White-label Mobile Platforms · Flutter &amp; Android</span>
           </p>
           <p className="hero-description">
-            Building scalable, user-centric mobile applications with Clean Architecture,
-            Riverpod state management, and seamless RESTful API &amp; payment gateway integration.
+            I build production platforms for ISP and education clients — including a white-label
+            Android platform that ships 1,000+ separately branded apps to Google Play from a single
+            Java codebase, with the build tooling, release automation, payment and hardware
+            integrations that keep it shipping.
           </p>
 
           <div className="hero-buttons">
@@ -61,18 +63,18 @@ export default function Hero() {
 
           <div className="hero-stats">
             <div className="stat-item">
+              <span className="stat-number">1,000+</span>
+              <span className="stat-label">Apps Shipped to Play</span>
+            </div>
+            <div className="stat-divider"></div>
+            <div className="stat-item">
+              <span className="stat-number">9</span>
+              <span className="stat-label">Payment Gateways</span>
+            </div>
+            <div className="stat-divider"></div>
+            <div className="stat-item">
               <span className="stat-number">3+</span>
               <span className="stat-label">Years Experience</span>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <span className="stat-number">2</span>
-              <span className="stat-label">Major Projects</span>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <span className="stat-number">10+</span>
-              <span className="stat-label">Modules Built</span>
             </div>
           </div>
 

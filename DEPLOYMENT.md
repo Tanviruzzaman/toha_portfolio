@@ -34,7 +34,7 @@ git init
 git add .
 git commit -m "Initial portfolio commit"
 git branch -M main
-git remote add origin https://github.com/Tanviruzzaman/portfolio.git
+git remote add origin https://github.com/Tanviruzzaman/toha_portfolio.git
 git push -u origin main
 ```
 
@@ -67,7 +67,7 @@ git subtree push --prefix dist origin gh-pages
 3. Select `gh-pages` as the source branch
 4. Save and wait for deployment
 
-Your portfolio will be live at: `https://Tanviruzzaman.github.io/portfolio/`
+Your portfolio will be live at: `https://Tanviruzzaman.github.io/toha_portfolio/`
 
 ## Customization Tips
 

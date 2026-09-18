@@ -4,35 +4,35 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'Edufy — Education Management System',
-      description: 'Multi-role app with Admin, Student, and Teacher portals. Students access class & exam routines, leave applications, discipline history, and payment receipts. Built with Flutter Clean Architecture and Riverpod.',
-      technologies: ['Flutter', 'Dart', 'Riverpod', 'Clean Architecture', 'REST API'],
+      title: 'ISP Digital — White-label ISP Platform',
+      description: 'A single Java codebase shipping 1,000+ separately branded, separately signed apps to Google Play, with three role-based apps in one binary (subscriber, ISP admin, MAC reseller). I integrated 9 payment gateways behind a common abstraction, real-time MikroTik bandwidth monitoring over SignalR, and Bluetooth ESC/POS + Sunmi thermal receipt printing. Top contributor: 363 of 730 commits.',
+      technologies: ['Android SDK', 'Java', 'MVVM', 'Dagger 2', 'Retrofit', 'Firebase', 'SignalR', 'MikroTik'],
       link: '#',
       type: 'Featured'
     },
     {
       id: 2,
-      title: 'ISP Digital — ISP Management System',
-      description: 'Full-featured ISP platform with Admin, MAC (Manager/Accountant), and Client portals. Includes bill collection, POS printer integration, live zone-wise analytics, fund recharge, and payment gateway.',
-      technologies: ['Flutter', 'Android', 'Payment Gateway', 'REST API', 'Analytics'],
+      title: 'Edufy — School Management Platform',
+      description: 'A 135K-LOC Flutter school ERP with 40+ modules, shipping as 300 white-label apps. Admin, Teacher and Student roles cover notices, leave approval, discipline records, document management, attendance and marksheets. Built feature-first with Riverpod, Dio and go_router, a token interceptor, session invalidation and encrypted storage, plus 5-language i18n including RTL (Bangla, Arabic, Urdu, Turkish).',
+      technologies: ['Flutter', 'Dart', 'Riverpod', 'Dio', 'go_router', 'i18n / RTL', 'REST API'],
       link: '#',
       type: 'Featured'
     },
     {
       id: 3,
-      title: 'Admin & Billing Portal',
-      description: 'Comprehensive admin module featuring bill collection, billing lists, POS printer integration, task management, support ticketing, live zone-wise client analytics, and accounting reports.',
-      technologies: ['Flutter', 'Dart', 'MVVM', 'REST API', 'Analytics'],
+      title: 'Release Automation Pipeline',
+      description: 'A Python + Fastlane pipeline (keystore generation, flavor scaffolding, icon/resource generation, batched Gradle builds and direct Play Store upload) that cut new-tenant onboarding and app updates from a manual multi-hour process to a single command — turning a 300-app release into one unattended run.',
+      technologies: ['Python', 'Fastlane', 'Gradle', 'Google Play API', 'CI/CD'],
       link: '#',
-      type: 'Module'
+      type: 'Tooling'
     },
     {
       id: 4,
-      title: 'Client Payment Portal',
-      description: 'Client-facing module with invoice and payment history, online payment processing, package management, ping testing, news and events feed, and profile management.',
-      technologies: ['Flutter', 'Riverpod', 'Payment Gateway', 'Clean Architecture'],
+      title: 'Build-time Firebase Config Resolver',
+      description: 'A Gradle task that hooks into processGoogleServices to auto-select the correct google-services.json from 37 Firebase projects per applicationId, and fails the build on an unregistered app — eliminating a recurring class of production bugs where a mismatched config silently broke push notifications and login for an entire tenant.',
+      technologies: ['Gradle', 'Java', 'Firebase', 'Build Tooling'],
       link: '#',
-      type: 'Module'
+      type: 'Tooling'
     }
   ]
 

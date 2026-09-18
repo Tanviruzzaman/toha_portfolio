@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer-content">
           <div className="footer-section">
             <h3>Tanvir Toha</h3>
-            <p>Mobile Application Developer | Flutter & Android</p>
+            <p>Android Platform Engineer | Flutter & Android</p>
           </div>
 
           <div className="footer-section">
@@ -24,10 +24,10 @@ export default function Footer() {
           <div className="footer-section">
             <h4>Skills</h4>
             <ul>
+              <li>Native Android (Java)</li>
               <li>Flutter & Dart</li>
-              <li>Native Android</li>
-              <li>Clean Architecture</li>
-              <li>Riverpod</li>
+              <li>Gradle & Fastlane</li>
+              <li>CI/CD & Play API</li>
             </ul>
           </div>
         </div>

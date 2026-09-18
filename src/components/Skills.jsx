@@ -3,24 +3,29 @@ import '../styles/Skills.css'
 export default function Skills() {
   const skillCategories = [
     {
-      icon: '📱',
-      category: 'Mobile Development',
-      skills: ['Flutter', 'Dart', 'Native Android', 'Java']
+      icon: '💻',
+      category: 'Languages',
+      skills: ['Java', 'Dart', 'Python', 'C']
     },
     {
-      icon: '🏗️',
-      category: 'Architecture & Patterns',
-      skills: ['Clean Architecture', 'MVVM', 'Riverpod', 'Modular Design']
+      icon: '🤖',
+      category: 'Android (Native)',
+      skills: ['Android SDK', 'MVVM', 'Dagger 2', 'Retrofit / OkHttp', 'Coroutines', 'Paging 3', 'WorkManager']
+    },
+    {
+      icon: '📱',
+      category: 'Flutter',
+      skills: ['Riverpod', 'Dio', 'go_router', 'Feature-first Architecture', 'i18n / RTL']
+    },
+    {
+      icon: '⚙️',
+      category: 'Platform & DevOps',
+      skills: ['Gradle (multi-flavor)', 'Fastlane', 'CI/CD', 'Play Console & Play API', 'Firebase (FCM, Analytics)', 'Git']
     },
     {
       icon: '🔗',
-      category: 'Backend & Integration',
-      skills: ['REST APIs', 'Payment Gateway', 'Python', 'Git']
-    },
-    {
-      icon: '🛠️',
-      category: 'Platforms & Tools',
-      skills: ['Mac OS', 'Wwise', 'Firebase', 'API Gateway']
+      category: 'Integrations',
+      skills: ['9 Payment Gateways', 'SignalR', 'MikroTik Java API', 'ESC/POS & Sunmi Printing']
     }
   ]
 
@@ -52,10 +57,12 @@ export default function Skills() {
           <div className="highlight-card">
             <h3>Technical Proficiency</h3>
             <p>
-              Specialized in building scalable Flutter and Native Android applications using
-              Clean Architecture and Riverpod for state management. Experienced in developing
-              multi-role portals (Admin, Manager, Client) with RESTful API and payment gateway
-              integration for real-world production environments.
+              I build and maintain white-label mobile platforms at scale — a single Java Android
+              codebase shipping 1,000+ separately branded apps, and a 135K-LOC Flutter school ERP
+              on a feature-first architecture. I own the build tooling and release automation
+              (multi-flavor Gradle, Python + Fastlane, direct Play API publishing), integrate
+              payment gateways and router/POS hardware, and keep large dependency sets compliant
+              through Android 14/15/16 target-SDK migrations.
             </p>
           </div>
         </div>
