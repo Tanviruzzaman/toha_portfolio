@@ -13,7 +13,7 @@ single Java codebase, along with the build tooling, release automation, and paym
 integrations that keep it shipping.
 
 - 📍 Narayanganj, Dhaka, Bangladesh
-- 💼 [LinkedIn](https://www.linkedin.com/in/tanviruzzaman-toha-730b8b1b9)
+- 💼 [LinkedIn](https://www.linkedin.com/in/tanvir-toha-506806306)
 - 💻 [GitHub](https://github.com/Tanviruzzaman)
 - 📧 toha@softifybd.com
 
