@@ -34,7 +34,7 @@ export default function Contact() {
             </p>
             <a className="contact-email" href="mailto:toha@softifybd.com">toha@softifybd.com</a>
             <div className="contact-socials">
-              <a className="link-arrow" href="https://www.linkedin.com/in/tanviruzzaman-toha-730b8b1b9" target="_blank" rel="noopener noreferrer">
+              <a className="link-arrow" href="https://www.linkedin.com/in/tanvir-toha-506806306" target="_blank" rel="noopener noreferrer">
                 LinkedIn <span className="arrow">↗</span>
               </a>
               <a className="link-arrow" href="https://github.com/Tanviruzzaman" target="_blank" rel="noopener noreferrer">
